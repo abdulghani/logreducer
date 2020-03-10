@@ -1,6 +1,4 @@
-export interface action {
+export interface Action {
   type: string;
   [args: string]: any;
 }
-
-export type reducer = (state: any, action: action) => any;
