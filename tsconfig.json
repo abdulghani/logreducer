@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "outDir": "build",
+    "outDir": "./build",
     "declaration": true,
     "emitDeclarationOnly": true,
     "isolatedModules": true,
   },
-  "include": ["src"],
-  "exclude": ["dist", "node_modules", "dev-utils", "**/*.test.ts"]
+  "include": ["./src"],
 }
