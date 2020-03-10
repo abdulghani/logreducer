@@ -1,0 +1,31 @@
+{
+  "name": "@abdulghani/logreducer",
+  "version": "1.0.4",
+  "description": "a lightweight logreducer function for reducer",
+  "homepage": "git@github.com:abdulghani/logreducer.git",
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "babel ./src --out-dir ./build --extensions \".ts\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish --acess=public"
+  },
+  "keywords": [
+    "reducer",
+    "logger",
+    "logreducer",
+    "redux",
+    "usereducer"
+  ],
+  "author": "Abdul Ghani (http://abdul-ghani.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-typescript": "^7.8.3",
+    "babel-preset-minify": "^0.5.1"
+  },
+  "dependencies": {
+    "@types/node": "^13.9.0"
+  }
+}
