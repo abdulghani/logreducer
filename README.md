@@ -22,6 +22,7 @@ npm install @abdulghani/logreducer
 import logReducer from "@abdulghani/logreducer";
 import reducer from "somewhere";
 
+// setup your reducer
 const loggedReducer = logReducer(reducer);
 
 const MyApp = () => {
