@@ -1,14 +1,15 @@
-import { action, reducer } from "./constants";
+import { Reducer } from "react";
+import { Action } from "./constants";
 
-const logReducer = (reducer: reducer) => {
+const logReducer = (reducer: Reducer<any, Action>) => {
   // don't log them if not using dev mode
   if (process.env.NODE_ENV !== "development") {
     return reducer;
   }
 
-  return (state: any, action: action) => {
-    const prevState = { ...state };
-    const nextState = reducer(state, action);
+  return (state: any, action: Action) => {
+    const prevState: any = { ...state };
+    const nextState: any = reducer(state, action);
 
     console.groupCollapsed(
       `%cAction: %c${action.type} %c${logTime()}`,
@@ -25,14 +26,14 @@ const logReducer = (reducer: reducer) => {
   };
 };
 
-const logTime = () => {
-  const time = new Date();
+const logTime = (): string => {
+  const time: Date = new Date();
 
-  const isPm = (time.getHours() > 12 && true) || false;
-  const hour = (isPm && time.getHours() - 12) || time.getHours();
-  const minutes = time.getMinutes();
-  const seconds = time.getSeconds();
-  const milliseconds = time.getMilliseconds();
+  const isPm: boolean = (time.getHours() > 12 && true) || false;
+  const hour: number = (isPm && time.getHours() - 12) || time.getHours();
+  const minutes: number = time.getMinutes();
+  const seconds: number = time.getSeconds();
+  const milliseconds: number = time.getMilliseconds();
 
   return `${hour}:${minutes}:${seconds} ${(!isPm && "am") ||
     "pm"} ${milliseconds}`;
