@@ -1,6 +1,6 @@
 {
   "name": "@abdulghani/logreducer",
-  "version": "1.1.0",
+  "version": "1.0.12",
   "description": "a lightweight logreducer function for reducer",
   "homepage": "git@github.com:abdulghani/logreducer.git",
   "main": "./build/index.js",
