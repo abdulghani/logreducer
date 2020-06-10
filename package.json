@@ -1,8 +1,11 @@
 {
   "name": "@abdulghani/logreducer",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "a lightweight logreducer function for reducer",
   "homepage": "git@github.com:abdulghani/logreducer.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "main": "./build/index.js",
   "scripts": {
     "build": "rm -rf ./build && babel ./src --out-dir ./build --extensions \".ts\" && tsc",
