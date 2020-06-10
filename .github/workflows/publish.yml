@@ -12,17 +12,17 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-        registry-url: 'https://registry.npmjs.org'
-    - run: yarn install
-    - run: yarn build
-    - run: git config --global user.email "contact.abdulghani@gmail.com"
-    - run: git config --global user.name "Abdul Ghani"
-    - run: npm version patch
-    - run: npm publish --access=public
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+    # - uses: actions/checkout@v2
+    # - uses: actions/setup-node@v1
+    #   with:
+    #     node-version: ${{ matrix.node-version }}
+    #     registry-url: 'https://registry.npmjs.org'
+    # - run: yarn install
+    # - run: yarn build
+    # - run: git config --global user.email "contact.abdulghani@gmail.com"
+    # - run: git config --global user.name "Abdul Ghani"
+    # - run: npm version patch
+    # - run: npm publish --access=public
+    #   env:
+    #     NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     
