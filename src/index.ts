@@ -3,7 +3,10 @@ import { Action } from "./constants";
 
 const logReducer = (reducer: Reducer<any, Action>) => {
   // don't log them if not using dev mode
-  if (process.env.NODE_ENV !== "development") {
+  if (
+    process.env.NODE_ENV !== "development" ||
+    typeof navigator === "undefined"
+  ) {
     return reducer;
   }
 
@@ -35,8 +38,9 @@ const logTime = (): string => {
   const seconds: number = time.getSeconds();
   const milliseconds: number = time.getMilliseconds();
 
-  return `${hour}:${minutes}:${seconds} ${(!isPm && "am") ||
-    "pm"} ${milliseconds}`;
+  return `${hour}:${minutes}:${seconds} ${
+    (!isPm && "am") || "pm"
+  } ${milliseconds}`;
 };
 
 export default logReducer;
